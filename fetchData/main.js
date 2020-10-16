@@ -9,3 +9,21 @@ document
       })
       .catch(() => console.log("La URL está mal"));
   });
+
+// ---------------
+
+async function retrieveTrumpData(keywords) {
+  let result = await fetch(`https://api.whatdoestrumpthink.com/api/v1/quotes/personalized?q=${keywords}`)
+    .then(response => response.json())
+    .then(data => data.message);
+  return result;
+}
+
+document
+  .querySelector("#btnTrump")
+  .addEventListener("click", async () => {
+    let keywords = document.querySelector("#donald").value;
+    let quote = document.createElement("p");
+    quote.innerText = await retrieveTrumpData(keywords);
+    document.querySelector("#trumpbox").appendChild(quote);
+  });
