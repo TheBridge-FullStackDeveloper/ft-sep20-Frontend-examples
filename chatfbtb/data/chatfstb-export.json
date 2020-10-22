@@ -1,0 +1,14 @@
+{
+  "messages" : [ {
+    "currentdate" : "2020-10-22",
+    "text" : "ola k ase"
+  }, {
+    "currentdate" : "2020-10-25",
+    "text" : "que te den"
+  } ],
+  "users" : [ {
+    "name" : "Don Pepito"
+  }, {
+    "name" : "Don José"
+  } ]
+}
